@@ -611,6 +611,10 @@ footer ul{
     }
 
     .explore h2{
-        width: 280px;
+        width: 300px;
+    }
+
+    .list p{
+        width: 250px;
     }
 }
