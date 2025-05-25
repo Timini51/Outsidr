@@ -339,6 +339,7 @@
         </div>
     </footer>
 
+        <script src="https://unpkg.com/scrollreveal"></script>
     <script defer>
         const nav = document.querySelector('.navbar');
         const menu = document.querySelector('.menu');
@@ -351,7 +352,47 @@
     window.onscroll = () => {
     nav.classList.remove('active');
     }
+
+    //Scroll reveal
+    const sr = ScrollReveal({
+    distance: '40px',
+    duration: 2400,
+    delay:400,
+    reset: true,
+    cleanup: true
+});
+
+//home page
+sr.reveal('.main h1',{delay: 200, origin: 'left'});
+sr.reveal('.main p',{delay: 300, origin: 'right'});
+sr.reveal('.main .download',{delay: 400, origin: 'top'});
+sr.reveal('.main img',{delay: 100, origin: 'bottom'});
+
+//icon
+sr.reveal('.icons div',{delay: 200, origin: 'bottom'});
+
+//feature
+sr.reveal('.frame .ftimg',{delay: 200, origin: 'left'});
+sr.reveal('.frame .manimg',{delay: 200, origin: 'right'});
+
+//work
+sr.reveal('.listing .list',{delay: 200, origin: 'left'});
+sr.reveal('.frame .workImg',{delay: 300, origin: 'bottom'});
+
+//us
+sr.reveal('.grid .box',{delay: 200, origin: 'bottom'});
+sr.reveal('.grider .info',{delay: 300, origin: 'bottom'});
+sr.reveal('.testimonial .testimony',{delay: 400, origin: 'right'});
+sr.reveal('.explore h2',{delay: 200, origin: 'top'});
+sr.reveal('.explore button',{delay: 300, origin: 'bottom'});
+
+//footer
+sr.reveal('footer .Copyright',{delay: 400, origin: 'bottom'});
+sr.reveal('footer .outsidr',{delay: 300, origin: 'left'});
+sr.reveal('footer .letter',{delay: 300, origin: 'left'});
+sr.reveal('footer .category',{delay: 300, origin: 'left'});
     </script>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 </html>
