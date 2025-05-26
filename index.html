@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <section class="hero">
@@ -30,11 +31,11 @@
 
         <section class="main">
             <div class="writeup">
-                <h1>Discover Lagos<br> Events With A Few<br>
-                Clicks Here</h1><br>
+                <h1>Discover events<br>Happening around<br>
+                with a few clicks</h1><br>
 
-                <p>Explore a world of events tailored to your interests. Find local
-                     gatherings, online experiences, and more.</p><br>
+                <p>Discover events that spark your passion/interest, connect with like-minded
+                    people and create unforgettable  experiences </p><br>
 
                      <div class="download">
                         <span><img src="app.png"></span>
@@ -93,7 +94,10 @@
                     <span><img src="vector8.png"></span>
                     <span>
                         <h3>Get Whatsapp Reminders</h3><br>
-                    <p>Receive updates via Whatsapp so you never miss a thing</p>
+                    <p>Stay in loop! Receive updates directly via whatsapp and
+                    never miss out on events.
+
+                    </p>
                 </span>
                 </div><br>
 
@@ -101,7 +105,7 @@
                     <span><img src="vector9.png"></span>
                     <span>
                         <h3>Successful Registration</h3><br>
-                    <p>Receive updates via Whatsapp so you never miss a thing</p>
+                    <p>Register with ease and get instant confirmation.</p>
                 </span>
                 </div>
             </div>
@@ -212,13 +216,14 @@
     <section class="features">
         <div class="topic"><h2>What Our Users Are Saying</h2></div>
 
+        <div class="swiper">
         <div class="control">
-            <img src="arr.png">
-            <img src="arr1.png">
+            <img src="arr.png" class="swiper-button-prev prev">
+            <img src="arr1.png" class="swiper-button-next next">
         </div>
 
-        <div class="testimonial">
-            <div class="testimony">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
                 <span class="people">
                     <img src="user.png">
                     <h3>Sarah M.</h3>
@@ -229,7 +234,7 @@
                 </p>
             </div>
 
-             <div class="testimony" id="second">
+             <div class="swiper-slide">
                 <span class="people">
                     <img src="user1.png">
                     <h3>John B.</h3>
@@ -240,7 +245,7 @@
                 </p>
             </div>
 
-             <div class="testimony" id="last">
+             <div class="swiper-slide">
                 <span class="people">
                     <img src="user2.png">
                     <h3>Emily L.</h3>
@@ -250,6 +255,7 @@
                     Plus the variety of events are incredible.
                 </p>
             </div>
+        </div>
         </div>
     </section>
 
@@ -340,6 +346,7 @@
     </footer>
 
         <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script defer>
         const nav = document.querySelector('.navbar');
         const menu = document.querySelector('.menu');
@@ -373,7 +380,7 @@ sr.reveal('.icons div',{delay: 200, origin: 'bottom'});
 
 //feature
 sr.reveal('.frame .ftimg',{delay: 200, origin: 'left'});
-sr.reveal('.frame .manimg',{delay: 200, origin: 'right'});
+sr.reveal('.frame .manimg',{delay: 200, origin: 'top'});
 
 //work
 sr.reveal('.listing .list',{delay: 200, origin: 'left'});
@@ -382,7 +389,6 @@ sr.reveal('.frame .workImg',{delay: 300, origin: 'bottom'});
 //us
 sr.reveal('.grid .box',{delay: 200, origin: 'bottom'});
 sr.reveal('.grider .info',{delay: 300, origin: 'bottom'});
-sr.reveal('.testimonial .testimony',{delay: 400, origin: 'right'});
 sr.reveal('.explore h2',{delay: 200, origin: 'top'});
 sr.reveal('.explore button',{delay: 300, origin: 'bottom'});
 
@@ -391,8 +397,39 @@ sr.reveal('footer .Copyright',{delay: 400, origin: 'bottom'});
 sr.reveal('footer .outsidr',{delay: 300, origin: 'left'});
 sr.reveal('footer .letter',{delay: 300, origin: 'left'});
 sr.reveal('footer .category',{delay: 300, origin: 'left'});
+
+//Swiper
+const swiper = new Swiper('.swiper', {
+  direction: 'horizontal',
+  loop: true,
+slidesPerView: 3,
+breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+
+    928: {
+      slidesPerView: 3,
+      spaceBetween: 20
+    },
+    1200: {
+      slidesPerView: 3,
+      spaceBetween: 20
+    }
+  },
+  // Navigation arrows
+  navigation: {
+    nextEl: '.next',
+    prevEl: '.prev',
+  },
+})
     </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 </html>
