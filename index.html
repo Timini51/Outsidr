@@ -59,6 +59,7 @@
         <div class="first2"><img src="icon5.png"></div>
         <div class="first2"><img src="icon6.png"></div>
         <div class="first"><img src="icon7.png"></div>
+        <div class="first"><img src="icon.png"></div>
         <div><img src="icon1.png"></div>
         <div><img src="icon2.png"></div>
         <div><img src="icon3.png"></div>
@@ -369,12 +370,21 @@
     nav.classList.remove('active');
     }
 
+    //icon duplicate
+    const icons = document.querySelector('.icons');
+    const icon = document.querySelector('.icon');
+
+    let iconInner = icon.innerHTML;
+    for (let i = 0; i < 10; i++){
+        icon.innerHTML += iconInner;
+    }
+
     //Scroll reveal
     const sr = ScrollReveal({
     distance: '40px',
     duration: 2400,
     delay:400,
-    reset: true,
+    reset: false,
     cleanup: true,
 });
 

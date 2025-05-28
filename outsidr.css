@@ -125,9 +125,8 @@ header{
 
 .icon{
     display: flex;
-    animation: right 20s linear infinite;
-    white-space: nowrap;
-    animation-play-state: running;
+    animation: right 60s linear infinite;
+    position: absolute;
 }
 
 .icon img{
@@ -143,7 +142,7 @@ header{
         transform: translateX(-50%)
     }
     100%{
-        transform: translateX(0%)
+        transform: translateX(0)
     }
 }
 
