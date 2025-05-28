@@ -377,7 +377,7 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #dddcdc;
+    color: rgb(173, 170, 170);
 }
 
 footer ul{
